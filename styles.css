@@ -65,11 +65,21 @@ body {
 }
 .profile-items {
   display: grid;
-  grid-template-columns: repeat(10, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   text-align: right;
+  align-items: center;
+  justify-self: center;
 }
-.bell-icon{
-  grid-column-start: 2;
+.profile-header {
+  justify-self: center;
+  grid-column-start: 4;
+}
+.user-name-header {
+  grid-column-start: 5;
+}
+.bell-icon {
+  grid-column-start: 3;
+  justify-self: end;
 }
 .nav {
   background-color: var(--color-surface-mixed-a20);
@@ -77,9 +87,14 @@ body {
   grid-column-start: 2;
   grid-column-end: 5;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   align-items: center;
   padding: 15px;
+}
+.nav-profile {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 0.2fr 1fr;
 }
 .aside {
   grid-row-start: 1;
@@ -159,12 +174,26 @@ li {
   background-color: white;
   color: black;
   padding: 15px;
+  border-radius: 1rem;
 }
 .annoucements-content {
   margin-top: 10px;
+  /* border-bottom: solid black 1px; */
+}
+.annoucement-title,
+.annoucement-description {
+  font-size: 0.7rem;
+}
+.underline {
+  margin-top: 0.8rem;
   border-bottom: solid black 1px;
+  width: 100%;
+}
+.annoucement-title {
+  font-weight: 800;
 }
 .trending {
+  border-radius: 1rem;
   background-color: white;
   color: black;
   padding: 15px;
@@ -173,4 +202,8 @@ li {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 15px;
+}
+button {
+  padding: 10px 15px;
+  width: 5rem;
 }
